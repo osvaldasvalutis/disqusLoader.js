@@ -1,5 +1,5 @@
 # disqusLoader.js
-A JavaScript plugin for lazy-loading responsive Disqus comments widget.
+A JavaScript plugin for lazy-loading Disqus comments widget.
 
 ## Usage and Demo
 Read [how to use it]( https://css-tricks.com/lazy-loading-disqus-comments).
