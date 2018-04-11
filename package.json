@@ -1,5 +1,5 @@
 {
-  "name": "disqusloader.js",
+  "name": "disqusLoader.js",
   "version": "1.0.0",
   "description": "A JavaScript plugin for lazy-loading Disqus comments widget.",
   "main": "disqusloader.js",
