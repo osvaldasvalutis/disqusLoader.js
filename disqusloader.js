@@ -109,7 +109,7 @@
 		else if( typeof element.length === 'number' )	instance = element[ 0 ];
 		else											instance = element;
 
-		instance.disqusLoaderStatus = 'unloaded';
+		if (instance) instance.disqusLoaderStatus = 'unloaded';
 
 		init();
 	};
