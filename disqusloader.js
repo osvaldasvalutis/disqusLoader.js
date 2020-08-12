@@ -26,7 +26,7 @@
 		getOffset = function( el )
 		{
 			var rect = el.getBoundingClientRect();
-			return { top: rect.top + document.body.scrollTop, left: rect.left + document.body.scrollLeft };
+			return { top: rect.top, bottom: rect.bottom };
 		},
 		loadScript = function( url, callback )
 		{
@@ -56,11 +56,10 @@
 			if( !instance || !document.body.contains( instance ) || instance.disqusLoaderStatus == 'loaded' )
 				return true;
 
-			var winST	= window.pageYOffset,
-				offset	= getOffset( instance ).top;
+			var offset = getOffset( instance );
 
 			// if the element is too far below || too far above
-			if( offset - winST > window.innerHeight * laziness || winST - offset - instance.offsetHeight - ( window.innerHeight * laziness ) > 0 )
+			if( offset.top > window.innerHeight * laziness || offset.bottom < - instance.offsetHeight - ( window.innerHeight * laziness ) )
 				return true;
 
 			var tmp = document.getElementById( 'disqus_thread' );
